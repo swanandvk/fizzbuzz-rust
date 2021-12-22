@@ -4,14 +4,14 @@ fn main() {
     }
 }
 
-pub fn generate_fizz_buzz(_n: i32) -> &'static str {
+pub fn generate_fizz_buzz(_n: i32) -> String {
     return if is_divisible_by_three(_n) && is_divisible_by_five(_n) {
-        "FizzBuzz"
+        "FizzBuzz".to_string()
     } else if is_divisible_by_five(_n) {
-        "Buzz"
+        "Buzz".to_string()
     } else if is_divisible_by_three(_n) {
-        "Fizz"
-    } else { "" };
+        "Fizz".to_string()
+    } else { _n.to_string() };
 }
 
 fn is_divisible_by_three(_number: i32) -> bool {
